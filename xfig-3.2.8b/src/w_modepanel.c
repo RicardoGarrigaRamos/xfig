@@ -55,6 +55,9 @@
 #include "e_measure.h"
 #include "e_move.h"
 #include "e_movept.h"
+
+#include "w_rulers.h"
+
 #include "e_scale.h"
 #include "e_tangent.h"
 #include "e_update.h"
@@ -239,6 +242,15 @@ mode_sw_info mode_switches[] = {
 	{&copy_ic, F_COPY, copy_selected, M_ALL, I_COPY,
 		"COPY objects  (Ctrl-c)",
 		False, NULL, (Pixmap)0, (Pixmap)0},
+
+
+	{&unittoggle_ic, F_NULL, toggle_in_cm, M_ALL, I_NONE,
+		"Toggle units between inches and centimeters",
+		False, NULL, (Pixmap)0, (Pixmap)0},
+
+
+
+
 	{&deletept_ic, F_DELETE_POINT, delete_point_selected, M_VARPTS_OBJECT,0,
 		"DELETE POINTs from lines, polygons and splines   (Shift-d)",
 		False, NULL, (Pixmap)0, (Pixmap)0},
@@ -284,13 +296,15 @@ mode_sw_info mode_switches[] = {
 	{&areameas_ic, F_AREAMEAS, areameas_selected, M_AREAMEAS_OBJECT, I_MIN2,
 		"Measure AREA of polygons, arcs and ellipses   (Ctrl-m)",
 		False, NULL, (Pixmap)0, (Pixmap)0},
-
-
-
-
-
 	{&copy_ic, F_COPY, copy_selected2, M_ALL, I_COPY,
 		"COPY objects  (Ctrl-c)",
+		False, NULL, (Pixmap)0, (Pixmap)0},
+
+
+
+
+	{&unittoggle_ic, F_NULL, toggle_in_cm, M_ALL, I_NONE,
+		"Toggle units between inches and centimeters",
 		False, NULL, (Pixmap)0, (Pixmap)0},
 
 
@@ -920,6 +934,12 @@ static void
 stub_copy_selected(void)
 {
 	change_mode(&copy_ic);
+}
+
+static void
+stub_unittoggle_selected(void)
+{
+	change_mode(&unittoggle_ic);
 }
 
 static void

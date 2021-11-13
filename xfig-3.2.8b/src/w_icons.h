@@ -54,6 +54,9 @@ extern icon_struct	cirdia_ic;
 extern icon_struct	c_spl_ic;
 extern icon_struct	c_xspl_ic;
 extern icon_struct	copy_ic;
+
+extern icon_struct unittoggle_ic;
+
 extern icon_struct	glue_ic;
 extern icon_struct	break_ic;
 extern icon_struct	library_ic;

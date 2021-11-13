@@ -38,3 +38,4 @@ extern void set_rulermark(int x, int y);
 extern void set_siderulermark(int y);
 extern void set_toprulermark(int x);
 extern void setup_topruler(void);
+void toggle_in_cm(void);
