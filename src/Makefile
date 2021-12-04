@@ -150,6 +150,7 @@ am__libxfig_a_SOURCES_DIST = d_arcbox.c d_arcbox.h d_arc.c d_arc.h \
 	e_joinsplit.h e_measure.c e_measure.h e_move.c e_move.h \
 	e_movept.c e_movept.h e_placelib.c e_placelib.h e_rotate.c \
 	e_rotate.h e_scale.c e_scale.h e_tangent.c e_tangent.h \
+	e_ffst.c e_ffst.h \
 	e_update.c e_update.h fig.h figx.h f_load.c f_load.h \
 	f_neuclrtab.c f_neuclrtab.h f_picobj.c f_picobj.h f_read.c \
 	f_readeps.c f_readgif.c f_read.h f_readold.c f_readpcx.c \
@@ -203,6 +204,7 @@ am__objects_8 = d_arcbox.$(OBJEXT) d_arc.$(OBJEXT) d_box.$(OBJEXT) \
 	e_measure.$(OBJEXT) e_move.$(OBJEXT) e_movept.$(OBJEXT) \
 	e_placelib.$(OBJEXT) e_rotate.$(OBJEXT) e_scale.$(OBJEXT) \
 	e_tangent.$(OBJEXT) e_update.$(OBJEXT) f_load.$(OBJEXT) \
+	e_ffst.$(OBJEXT) \
 	f_neuclrtab.$(OBJEXT) f_picobj.$(OBJEXT) f_read.$(OBJEXT) \
 	f_readeps.$(OBJEXT) f_readgif.$(OBJEXT) f_readold.$(OBJEXT) \
 	f_readpcx.$(OBJEXT) f_readppm.$(OBJEXT) f_readxbm.$(OBJEXT) \
@@ -245,6 +247,7 @@ am__xfig_SOURCES_DIST = d_arcbox.c d_arcbox.h d_arc.c d_arc.h d_box.c \
 	e_joinsplit.h e_measure.c e_measure.h e_move.c e_move.h \
 	e_movept.c e_movept.h e_placelib.c e_placelib.h e_rotate.c \
 	e_rotate.h e_scale.c e_scale.h e_tangent.c e_tangent.h \
+	e_ffst.c e_ffst.h \
 	e_update.c e_update.h fig.h figx.h f_load.c f_load.h \
 	f_neuclrtab.c f_neuclrtab.h f_picobj.c f_picobj.h f_read.c \
 	f_readeps.c f_readgif.c f_read.h f_readold.c f_readpcx.c \
@@ -289,6 +292,7 @@ am_xfig_OBJECTS = d_arcbox.$(OBJEXT) d_arc.$(OBJEXT) d_box.$(OBJEXT) \
 	e_measure.$(OBJEXT) e_move.$(OBJEXT) e_movept.$(OBJEXT) \
 	e_placelib.$(OBJEXT) e_rotate.$(OBJEXT) e_scale.$(OBJEXT) \
 	e_tangent.$(OBJEXT) e_update.$(OBJEXT) f_load.$(OBJEXT) \
+	e_ffst.$(OBJEXT) \
 	f_neuclrtab.$(OBJEXT) f_picobj.$(OBJEXT) f_read.$(OBJEXT) \
 	f_readeps.$(OBJEXT) f_readgif.$(OBJEXT) f_readold.$(OBJEXT) \
 	f_readpcx.$(OBJEXT) f_readppm.$(OBJEXT) f_readxbm.$(OBJEXT) \
@@ -580,6 +584,7 @@ xfig_SOURCES = d_arcbox.c d_arcbox.h d_arc.c d_arc.h d_box.c d_box.h \
 	e_joinsplit.h e_measure.c e_measure.h e_move.c e_move.h \
 	e_movept.c e_movept.h e_placelib.c e_placelib.h e_rotate.c \
 	e_rotate.h e_scale.c e_scale.h e_tangent.c e_tangent.h \
+	e_ffst.c e_ffst.h \
 	e_update.c e_update.h fig.h figx.h f_load.c f_load.h \
 	f_neuclrtab.c f_neuclrtab.h f_picobj.c f_picobj.h f_read.c \
 	f_readeps.c f_readgif.c f_read.h f_readold.c f_readpcx.c \

@@ -42,7 +42,6 @@
 
 #include "d_box.h"
 
-//#include <stdlib.h>
 
 #include "resources.h"
 #include "mode.h"

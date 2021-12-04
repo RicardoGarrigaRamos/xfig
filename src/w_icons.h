@@ -133,6 +133,9 @@ extern icon_struct	open_arc_ic;
 extern icon_struct	pie_wedge_arc_ic;
 extern icon_struct	xspl_ic;
 extern icon_struct	tangent_ic;
+
+extern icon_struct ffst_ic;
+
 extern icon_struct	anglemeas_ic;
 extern icon_struct	lenmeas_ic;
 extern icon_struct	areameas_ic;

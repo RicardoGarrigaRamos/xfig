@@ -55,11 +55,12 @@
 #include "e_measure.h"
 #include "e_move.h"
 #include "e_movept.h"
-
 #include "w_rulers.h"
-
 #include "e_scale.h"
 #include "e_tangent.h"
+
+#include "e_ffst.h"
+
 #include "e_update.h"
 #include "u_list.h"
 #include "u_markers.h"
@@ -122,6 +123,8 @@ static void	stub_anglemeas_selected(void);
 static void	stub_lenmeas_selected(void);
 static void	stub_areameas_selected(void);
 static void	stub_tangent_selected(void);
+
+static void stub_ffst_selected(void);
 
 /**************	    local variables and routines   **************/
 
@@ -242,15 +245,6 @@ mode_sw_info mode_switches[] = {
 	{&copy_ic, F_COPY, copy_selected, M_ALL, I_COPY,
 		"COPY objects  (Ctrl-c)",
 		False, NULL, (Pixmap)0, (Pixmap)0},
-
-
-	{&unittoggle_ic, F_NULL, toggle_in_cm, M_ALL, I_NONE,
-		"Toggle units between inches and centimeters",
-		False, NULL, (Pixmap)0, (Pixmap)0},
-
-
-
-
 	{&deletept_ic, F_DELETE_POINT, delete_point_selected, M_VARPTS_OBJECT,0,
 		"DELETE POINTs from lines, polygons and splines   (Shift-d)",
 		False, NULL, (Pixmap)0, (Pixmap)0},
@@ -286,6 +280,17 @@ mode_sw_info mode_switches[] = {
 	{&tangent_ic, F_TANGENT, tangent_selected, M_TANGENT_OBJECT, I_TANGENT,
 		"Add TANGENT/NORMAL to curve   (n)",
 		False, NULL, (Pixmap)0, (Pixmap)0},
+
+
+
+	//multiselect tool
+	{&ffst_ic, F_TANGENT, ffst_selected, M_TANGENT_OBJECT, I_TANGENT,
+		"BIG SELECT",
+		False, NULL, (Pixmap)0, (Pixmap)0},
+
+
+
+
 	{&anglemeas_ic, F_ANGLEMEAS, anglemeas_selected, M_ANGLEMEAS_OBJECT,
 		I_MIN2,
 		"MEASURE angle (specify three points or select object)   (Ctrl-g)",
@@ -299,17 +304,10 @@ mode_sw_info mode_switches[] = {
 	{&copy_ic, F_COPY, copy_selected2, M_ALL, I_COPY,
 		"COPY objects  (Ctrl-c)",
 		False, NULL, (Pixmap)0, (Pixmap)0},
-
-
-
-
 	{&unittoggle_ic, F_NULL, toggle_in_cm, M_ALL, I_NONE,
 		"Toggle units between inches and centimeters",
 		False, NULL, (Pixmap)0, (Pixmap)0},
-
-
-
-
+	
 	/* This must be last for create_mode_panel() (in w_canvas.c) */
 	{ NULL, 0, NULL, 0, 0, "", False, NULL, 0, 0}
 
@@ -1001,6 +999,18 @@ stub_tangent_selected(void)
 {
 	change_mode(&tangent_ic);
 }
+
+
+
+static void 
+stub_ffst_selected(void)
+{
+	change_mode(&ffst_ic);
+}
+
+
+
+
 
 static void
 stub_anglemeas_selected(void)
